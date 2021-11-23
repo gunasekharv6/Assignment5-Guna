@@ -28,12 +28,6 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="headerjLabel" min="-2" pref="474" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="headerjLabel1" min="-2" pref="383" max="-2" attributes="0"/>
-                      </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -42,17 +36,25 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
-                                  <Component id="cityjComboBox" min="-2" pref="224" max="-2" attributes="0"/>
+                                  <Component id="areajComboBox" min="-2" pref="224" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="251" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="addCityjComboBox" min="-2" pref="224" max="-2" attributes="0"/>
-                              <Group type="102" alignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="308" max="-2" attributes="0"/>
                                   <Component id="addCityjButton" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="237" max="-2" attributes="0"/>
+                                  <Component id="addAreajComboBox" min="-2" pref="224" max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="headerjLabel" min="-2" pref="474" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="headerjLabel1" min="-2" pref="383" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="257" max="-2" attributes="0"/>
@@ -87,15 +89,10 @@
                       <Component id="headerjLabel" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="headerjLabel1" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="cityjComboBox" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Component id="addCityjComboBox" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="areajComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="addAreajComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
@@ -119,13 +116,13 @@
                       <Component id="deletejButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="createjButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="158" max="32767" attributes="0"/>
+                  <EmptySpace pref="149" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JComboBox" name="cityjComboBox">
+        <Component class="javax.swing.JComboBox" name="areajComboBox">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="0"/>
@@ -141,7 +138,7 @@
               <Font name="Lucida Grande" size="18" style="3"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="City"/>
+            <Property name="text" type="java.lang.String" value="Area"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="proceedjButton">
@@ -158,10 +155,10 @@
               <Font name="Lucida Grande" size="18" style="3"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Add City?"/>
+            <Property name="text" type="java.lang.String" value="Add Area?"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="addCityjComboBox">
+        <Component class="javax.swing.JComboBox" name="addAreajComboBox">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="0"/>

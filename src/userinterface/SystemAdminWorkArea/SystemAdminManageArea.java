@@ -27,17 +27,20 @@ public class SystemAdminManageArea extends javax.swing.JPanel {
     AreaNetwork areaNetwork;
     UserAccount userLogged;
     
-    public SystemAdminManageArea(JPanel userProcessContainer,EcoSystem ecosystem,AreaNetwork areaNetwork,UserAccount userLogged) {
+    public SystemAdminManageArea(JPanel userProcessContainer,EcoSystem ecosystem, AreaNetwork areaNetwork,UserAccount userLogged) {
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
-        this.areaNetwork = this.areaNetwork;
+        this.areaNetwork = areaNetwork;
         this.userLogged = userLogged;
         initComponents();
+        System.out.println("haha Inside SystemAdminManageArea Panel -- updateLabel "+areaNetwork.getAreaName().name());
         updateLabel();
+        
     }
     
     private void updateLabel(){
-        headerjLabel.setText(headerjLabel.getText()+areaNetwork.getAreaName().name());
+        System.out.println("Inside SystemAdminManageArea Panel -- updateLabel "+ areaNetwork.getAreaName().name());
+        lblareaname.setText(areaNetwork.getAreaName().name());
     }
 
     /**
@@ -54,6 +57,7 @@ public class SystemAdminManageArea extends javax.swing.JPanel {
         manageRestaurantjButton = new javax.swing.JButton();
         manageCustomersjButton = new javax.swing.JButton();
         manageDeliveryPersonsjButton = new javax.swing.JButton();
+        lblareaname = new javax.swing.JLabel();
 
         backjButton.setText("< < Back");
         backjButton.addActionListener(new java.awt.event.ActionListener() {
@@ -87,24 +91,31 @@ public class SystemAdminManageArea extends javax.swing.JPanel {
             }
         });
 
+        lblareaname.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(backjButton)
-                .addGap(74, 74, 74)
-                .addComponent(headerjLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(manageRestaurantjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69)
                 .addComponent(manageCustomersjButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addGap(67, 67, 67)
                 .addComponent(manageDeliveryPersonsjButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(47, 47, 47))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(backjButton)
+                        .addGap(74, 74, 74)
+                        .addComponent(headerjLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(328, 328, 328)
+                        .addComponent(lblareaname, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {manageCustomersjButton, manageDeliveryPersonsjButton, manageRestaurantjButton});
@@ -116,12 +127,14 @@ public class SystemAdminManageArea extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(headerjLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(backjButton))
-                .addGap(56, 56, 56)
+                .addGap(2, 2, 2)
+                .addComponent(lblareaname, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(manageRestaurantjButton)
                     .addComponent(manageCustomersjButton)
                     .addComponent(manageDeliveryPersonsjButton))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -161,6 +174,7 @@ public class SystemAdminManageArea extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backjButton;
     private javax.swing.JLabel headerjLabel;
+    private javax.swing.JLabel lblareaname;
     private javax.swing.JButton manageCustomersjButton;
     private javax.swing.JButton manageDeliveryPersonsjButton;
     private javax.swing.JButton manageRestaurantjButton;
